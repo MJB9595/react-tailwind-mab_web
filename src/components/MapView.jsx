@@ -85,7 +85,7 @@ const MapView = ({selectedSpot, spots=[]}) => {
     },[ready,spots])
 
     useEffect(()=>{
-        if(!ready || !mapInstanceRef.current || !window.kakao?.maps) return
+        if(!ready || !selectedSpot || !mapInstanceRef.current || !window.kakao?.maps) return
 
         const map = mapInstanceRef.current
 

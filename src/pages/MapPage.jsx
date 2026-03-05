@@ -83,11 +83,15 @@ const MapPage = () => {
           className='flex-1 bg-slate-900 rounded-lg px-3 py-2 text-white font-medium'
           >검색</button>
         </div>
-        <ul className='max-h-[60vh] overflow-auto p-2'>
-          {filtered.map((item,idx)=>(
+          <ul className='max-h-[60vh] overflow-auto p-2'>
+          {filtered.map((item, idx) => (
             <li
-            key={idx}
-            className='rounded-xl p-3 hover:bg-slate-50 cursor-pointer'>
+              key={idx}
+              onClick={()=>setSelectedSpot(item)}
+              className={`rounded-xl p-3 hover:bg-slate-50 cursor-pointer border-2
+              ${selectedSpot?.name ===item.name? 'border-slate-900 bg-slate-50':'border-transparent'}
+              
+              `}>
               <div className='flex items-start justify-between gap-3'>
                 <div>
                   <div className='text-sm font-semibold'>{item.name}</div>
