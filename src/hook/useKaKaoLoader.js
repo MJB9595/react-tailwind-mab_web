@@ -12,7 +12,7 @@ const useKaKaoLoader = () => {
         //카카오 SDK가 이미 로딩되있으며 그냥 패스
         if(window.kakao?.maps){
             setReady(true)
-            retrun
+            return
         }
 
         // 로딩이 안되있으면 Vite 환경변수에서 앱 키 가져오기
