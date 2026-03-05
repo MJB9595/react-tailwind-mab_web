@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import useKakaoLoader from '../hook/useKakaoLoader'
+import useKakaoLoader from '../hook/useKaKaoLoader'
 const MapView = ({ selectedSpot, spots = [] }) => {
 
     const mapRef = useRef(null)
