@@ -34,12 +34,11 @@ const MapView = ({ selectedSpot, spots = [] }) => {
     }, [ready])
 
     useEffect(() => {
-        //1. 카카오 SDK 준비 안됐거나
-        //    지도 인스턴스가 없으면 실행 중단
+        // 카카오 SDK 준비 안됐거나 지도 인스턴스가 없으면 실행 중단
         if (!ready || !mapInstanceRef.current || !window.kakao?.maps) return
 
         const map = mapInstanceRef.current
-        /* 2.기존 마커 제거
+        /*기존 마커 제거
              * 
              * spots가 변경될 때마다 새로 그리기 때문에
              * 기존 마커를 먼저 지워줘야 중복이 안 생김
@@ -52,7 +51,7 @@ const MapView = ({ selectedSpot, spots = [] }) => {
         // 표시할 배열 없으면 종료
         if (!spots.length) return
 
-        // 3. spots 배열을 돌면서 마커 생성
+        //  spots 배열을 돌면서 마커 생성
         spots.forEach((spot) => {
             // 위도/경도 없으면 생성하지 않음
             if (!spot.lat || !spot.lng) return
@@ -72,7 +71,7 @@ const MapView = ({ selectedSpot, spots = [] }) => {
             //  나중에 제거하기 위해 ref 배열에 저장
             markersRef.current.push(marker)
 
-            //4. 마커 클릭 이벤트 등록
+            // 마커 클릭 이벤트 등록
             window.kakao.maps.event.addListener(marker, 'click', () => {
                 if (infoRef.current) {
                     infoRef.current.setContent(

@@ -11,10 +11,10 @@ const Header = () => {
         <header className='sticky top-0 z-50 border-b bg-white/80 backdrop-blur'>
             <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-3'>
                 <h1 className='flex items-center gap-3'>
-                    <div className='flex h-9 w-9 items-center justify-center bg-slate-900 text-white rounded-xl'>Wi</div>
+                    <div className='flex h-9 w-9 items-center justify-center bg-slate-900 text-white rounded-xl'>Gy</div>
                     <div>
-                        <div className='text-base font-semibold'>Wifi Spot</div>
-                        <div className='text-xs text-slate-500'>Public Wifi Map</div>
+                        <div className='text-base font-semibold'>경기도 지역화폐 가맹점</div>
+                        <div className='text-xs text-slate-500'>Public Gmoney-Map</div>
                     </div>
                 </h1>
                 <nav className='flex items-center gap-2'>
